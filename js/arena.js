@@ -28,6 +28,5 @@ export default class Arena {
             this.gladiators.pop();
         }
     }    
-Collapse        
-    }
+}
 
