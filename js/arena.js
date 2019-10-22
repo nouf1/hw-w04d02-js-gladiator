@@ -2,19 +2,25 @@
 import Gladiator from './gladiator.js'
 export default class Arena {
 
-    constructor(name , gladiators = []){
+    constructor(name){
         const uName = name.charAt(0).toUpperCase() + name.slice(1);
         this.name = uName;
+        this.gladiators = [];
+
         console.log(this.name);
 
         this.gladiators = gladiators;
+
         console.log(this.gladiators);
     }
     addGladiator (fighter){
-        if (this.gladiators.length < 2 ) {
+            if(this.gladiators.length < 2){
             this.gladiators.push(fighter);
-        }
+            } else {
+                console.log ("we are full")
+            }
     }
+    
     fight(){
         if (this.gladiators[1].weapon === this.gladiators[0].weapon){
             this.gladiators = [];
